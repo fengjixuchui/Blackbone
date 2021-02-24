@@ -2,7 +2,8 @@ name: Driver
 on:
   push:
     paths:
-      - 'src/BlackBoneDrv/**'
+    - '.github/**'
+    - 'src/BlackBoneDrv/**'
 
 jobs:
   driver:
@@ -15,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.0.0
+        uses: microsoft/setup-msbuild@v1.0.2
       - name: Build
         shell: cmd
         run: |
